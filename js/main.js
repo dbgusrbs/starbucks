@@ -1,18 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-});
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder','통합검색');
-});
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder','');
-});
-
 // 페이지 스크롤에 따른 요소 제어
 // 페이지 스크롤에 영향을 받는 요소들을 검색!
 // BADGE
@@ -118,7 +103,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') // 요소가 보이면 show 클래스 추가
     .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당
 });
-
-// 올해가 몇 년도인지 계산
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
